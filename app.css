@@ -2382,9 +2382,6 @@ textarea {
   }
 }
 
-.wow .pixZoomIn{
-  display: none;
-}
 
 @media (max-width: 420px) {
   .site-header .site-nav {
