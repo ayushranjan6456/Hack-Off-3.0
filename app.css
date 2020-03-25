@@ -131,6 +131,17 @@ section {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.sticker{
+  width:100%;
+  position: absolute;
+  top: 92vh;
+}
+
+.sticker img{
+  min-height: 70px;
+}
+
 .gutters-10 > [class*="col-"] {
   padding: 0 5px;
 }
@@ -1642,11 +1653,12 @@ textarea {
   max-width: 150px;
 }
 .site-header .header-inner .site-logo a img {
-  padding: 5%;
-  width: 100%;
+  width: 80%;
+  margin: 20% 0;
 }
 .site-header .header-inner .site-logo a .sticky-logo {
-  width: 50%;
+  width: 40%;
+  margin: 0;
   display: none;
 }
 .site-header .header-inner .site-nav {
@@ -2096,6 +2108,9 @@ textarea {
 .home-color-two .return-to-top:hover > i {
   text-shadow: 0 -50px #fff, 0 0 #fff;
 }
+
+
+
 @media (max-width: 991px) {
   .toggle-menu {
     position: absolute;
@@ -2381,8 +2396,6 @@ textarea {
     background: #2b2350;
   }
 }
-
-
 @media (max-width: 420px) {
   .site-header .site-nav {
     width: 100% !important;
@@ -2477,9 +2490,9 @@ textarea {
   max-width: unset;
 }
 .banner.banner-two .banner-content-wrap {
-  -webkit-transform: translateY(37%);
-  -ms-transform: translateY(37%);
-  transform: translateY(37%);
+  -webkit-transform: translateY(27%);
+  -ms-transform: translateY(27%);
+  transform: translateY(27%);
 }
 .banner.banner-two .banner-content .banner-title,
 .banner.banner-two .banner-content .description {
@@ -3044,6 +3057,8 @@ textarea {
 }
 .newsletter-form-banner .newsletter-inner button {
   position: absolute;
+  right: 3px;
+  top: 4px;
   border: 0;
   background: #7052fb;
   color: #fff;
@@ -3118,6 +3133,12 @@ textarea {
   -webkit-animation: r 4s 3s linear infinite alternate;
   animation: r 4s 3s linear infinite alternate;
 }
+
+.sticker img:nth-child(1) {
+  -webkit-animation: p 4s 3s linear infinite alternate;
+  animation: p 4s 3s linear infinite alternate;
+}
+
 .slider-nav {
   position: absolute;
   top: 40%;
@@ -3297,11 +3318,6 @@ textarea {
   .banner.banner-two .vector-bg img {
     height: 890px;
   }
-  .banner.banner-two .banner-content-wrap {
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    transform: translateY(50%);
-  }
   .banner.banner-two .banner-content .banner-title {
     font-size: 50px;
     line-height: 60px;
@@ -3368,6 +3384,11 @@ textarea {
     font-size: 40px;
     line-height: 50px;
   }
+  
+.site-header .header-inner .site-logo a img {
+  width: 60%;
+  margin: 20% 0;
+}
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .banner.banner-two .banner-content .banner-title {
@@ -4116,6 +4137,11 @@ textarea {
   a:hover {
   color: #fa7070;
 }
+
+.saaspik-icon-box-wrapper.style-two .saaspik-icon-box-icon{
+  width: 20%;
+}
+
 .saaspik-icon-box-wrapper .saaspik-icon-box-icon {
   margin-bottom: 32px;
 }
@@ -4644,6 +4670,11 @@ textarea {
   bottom: auto;
   top: -50%;
 }
+
+.featured-two-same .row
+
+
+
 .featured-four-ab {
   padding-top: 146px;
 }
@@ -7431,6 +7462,11 @@ textarea {
     padding: 5px 20px 25px;
   }
 }
+
+#brand-logo{
+  top:-50px;
+}
+
 #brand-logo .section-small {
   margin-top: -90px;
 }
