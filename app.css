@@ -10,6 +10,10 @@
   Text Domain: pixsaas
   Tags: game,business,coporate,startup
   */
+
+html{
+  scroll-behavior: smooth;
+}
 @-webkit-keyframes a {
   0% {
     opacity: 1;
@@ -1644,6 +1648,10 @@ textarea {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.banner-content{
+  margin-top: 40px;
 }
 .site-header .header-inner {
   position: relative;
@@ -3690,6 +3698,7 @@ textarea {
     position: relative;
     margin: 0 auto;
   }
+
 }
 @media (max-width: 768px) {
   .banner.banner-one {
@@ -4069,6 +4078,7 @@ textarea {
   }
   .section-title .title {
     font-size: 32px;
+    text-align: center;
   }
   .section-title p br {
     display: none;
@@ -4139,6 +4149,13 @@ textarea {
 }
 
 .saaspik-icon-box-wrapper.style-two .saaspik-icon-box-icon{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+.saaspik-icon-box-wrapper.style-two .saaspik-icon-box-icon img{
   width: 20%;
 }
 
@@ -4165,13 +4182,23 @@ textarea {
 }
 .saaspik-icon-box-wrapper .pixsass-icon-box-content p {
   margin: 0;
+  text-align: justify;
 }
 .saaspik-icon-box-wrapper.style-two {
-  margin-bottom: 88px;
+  padding: 25px;
+  min-height: 90%;
+  transition: 0.5s;
+}
+.saaspik-icon-box-wrapper.style-two:hover {
+  -webkit-box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
+-moz-box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
+box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
+  transition: 0.5s;
 }
 .saaspik-icon-box-wrapper.style-two
   .pixsass-icon-box-content
   .pixsass-icon-box-title {
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
@@ -4210,6 +4237,7 @@ textarea {
   width: 70px;
   margin-right: 30px;
   margin-bottom: 0;
+  
 }
 .saaspik-icon-box-wrapper.style-three .pixsass-icon-box-content {
   -webkit-box-flex: 1;
@@ -4646,7 +4674,8 @@ textarea {
   padding-top: 400px;
 }
 .featured-two-same {
-  padding-top: 144px;
+  top:-50px;
+  padding-top: 100px;
   padding-bottom: 27px;
 }
 .featured-two-same .section-title {
@@ -7464,12 +7493,17 @@ textarea {
 }
 
 #brand-logo{
-  top:-50px;
+  top:-100px;
 }
 
 #brand-logo .section-small {
   margin-top: -90px;
 }
+#brand-logo .content{
+  padding-top: 0px;
+  font-size: 50px;
+}
+
 .brand-logo {
   text-align: center;
 }
@@ -7503,6 +7537,10 @@ textarea {
   #brand-logo .section-small .title {
     margin-bottom: 50px;
   }
+  #brand-logo .content{
+    padding-top: 100px;
+    font-size: 45px;
+  }
   .brand-logo-ab {
     padding-bottom: 75px;
   }
@@ -7512,18 +7550,25 @@ textarea {
 }
 @media (max-width: 768px) {
   #brand-logo {
-    padding-top: 30px;
+    padding-top: 76px;
   }
   #brand-logo .section-small {
     margin-top: 0;
+  }
+  #brand-logo .content{
+    padding-top: 100px;
+    font-size: 40px;
   }
 }
 @media (max-width: 480px) {
   #brand-logo {
-    padding-top: 0;
+    padding-top: 50px;
   }
   #brand-logo .section-small {
     margin-top: 0;
+  }
+  #brand-logo .content{
+    font-size: 30px;
   }
 }
 .call-to-action {
