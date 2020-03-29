@@ -30,6 +30,11 @@ html{
     opacity: 0;
   }
 }
+
+.loader-finish{
+  display:none;
+}
+
 .element {
   width: 100px;
   height: 100px;
@@ -555,7 +560,7 @@ section {
   position: relative;
 }
 .list-items li:before {
-  content: "\4e";
+  content: "\21D2";
   font-family: eleganticons;
   position: absolute;
   left: 0;
@@ -1659,6 +1664,7 @@ textarea {
 .site-header .header-inner .site-logo a {
   display: block;
   max-width: 150px;
+  z-index: -1;
 }
 .site-header .header-inner .site-logo a img {
   width: 80%;
@@ -4153,10 +4159,12 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 rgb(68, 127, 216);
 }
 .saaspik-icon-box-wrapper.style-two .saaspik-icon-box-icon img{
-  width: 20%;
+  width: 30%;
+  border-radius: 50%;
 }
 
 .saaspik-icon-box-wrapper .saaspik-icon-box-icon {
@@ -4186,15 +4194,21 @@ textarea {
 }
 .saaspik-icon-box-wrapper.style-two {
   padding: 25px;
-  min-height: 90%;
+  min-height: 95%;
   transition: 0.5s;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.saaspik-icon-box-wrapper.style-two:hover {
-  -webkit-box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
--moz-box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
-box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
-  transition: 0.5s;
+.saaspik-icon-box-wrapper.style-two:hover .saaspik-icon-box-icon img{
+  box-shadow: 0 0 0 450px rgb(68, 127, 216);
+  transition: all .3s ease-in;
 }
+.saaspik-icon-box-wrapper.style-two:hover{
+  color:white
+}
+
 .saaspik-icon-box-wrapper.style-two
   .pixsass-icon-box-content
   .pixsass-icon-box-title {
@@ -4687,13 +4701,6 @@ box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
   .pixsass-icon-box-title
   a {
   color: #2b2350;
-}
-.featured-two-same
-  .saaspik-icon-box-wrapper.style-two
-  .pixsass-icon-box-content
-  .pixsass-icon-box-title
-  a:hover {
-  color: #7052fb;
 }
 .featured-two-same .scroll-circle {
   bottom: auto;
@@ -7616,20 +7623,9 @@ box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
   top: 40%;
 }
 .signup-section {
-  padding: 106px 0 111px;
   background-size: cover;
   background-position: 50%;
   position: relative;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#4f29dd),
-    to(#7052fb)
-  );
-  background-image: -o-linear-gradient(bottom, #4f29dd 0, #7052fb 100%);
-  background-image: linear-gradient(0deg, #4f29dd, #7052fb);
-  overflow: hidden;
 }
 .signup-section .bg-shape {
   position: absolute;
@@ -7642,8 +7638,9 @@ box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
   position: absolute;
 }
 .signup-section .bg-shape .shape-left {
-  top: 0;
+  top: -130px;
   left: 0;
+  width: -webkit-fill-available;
 }
 .signup-section .bg-shape .shape-right {
   bottom: 0;
@@ -9444,7 +9441,7 @@ box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
   }
 }
 .interface {
-  padding: 105px 0 60px;
+  padding: 130px 0 60px;
   overflow: hidden;
 }
 .interface-image-wrapper {
@@ -9484,7 +9481,7 @@ box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
   font-size: 18px;
 }
 .interface-content .list-items li:before {
-  content: "\52";
+  content: "\21D2";
   color: #13bf24;
 }
 .svgbg-one {
@@ -9556,9 +9553,6 @@ box-shadow: inset 7px 6px 29px -4px rgba(0,0,0,0.59);
   }
   .md-brn br {
     display: none;
-  }
-  .interface {
-    padding: 88px 0 37px;
   }
 }
 @media (max-width: 992px) {
