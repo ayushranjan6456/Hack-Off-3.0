@@ -86,15 +86,15 @@ var PIXELSIGNS = PIXELSIGNS || {};
                 !1
             }),
             d(".site-main-menu li a").each(function() {
-                d(this).attr("href") == location.href.split("/").slice(-1) && d(this).addClass("current_page")
+                d(this).attr("href") == location.href.split("/").slice(-1) && d(this).addClass("current_page"),
+                d(this).on("click", function(t) {
+                    d("body").removeClass("open-menu")
+                })
             }),
             d("body").on("contextmenu", function(t) {
                 return t.preventDefault(),
                 t.stopPropagation(),
                 !1
-            }),
-            d(document).on("keydown", function(t) {
-                return !(t.ctrlKey && 85 == t.keyCode || t.ctrlKey && t.shiftKey && 73 == t.keyCode || t.ctrlKey && t.shiftKey && 75 == t.keyCode || t.metaKey && t.shiftKey && 91 == t.keyCode)
             })
         },
         swiperSlider: function() {
@@ -420,3 +420,23 @@ window.onload = function() {
     document.body.appendChild(css);
 };
 
+
+faq_nav = document.querySelectorAll('.faqs .nav-link');
+list1 = document.querySelector('#Register')
+list2 = document.querySelector('#Hackathon')
+faq_nav.forEach(element => {
+    element.addEventListener('click', function(){
+        if(this.id=='design-tab'){
+            list1.classList.add('show');
+            list2.classList.remove('show');
+            list1.classList.add('active');
+            list2.classList.remove('active');
+        }
+        else{
+            list2.classList.add('show');
+            list1.classList.remove('show');
+            list2.classList.add('active');
+            list1.classList.remove('active');
+        }
+    })      
+});

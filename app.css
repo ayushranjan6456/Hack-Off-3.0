@@ -14,6 +14,21 @@
 html{
   scroll-behavior: smooth;
 }
+
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background:#7052fb;
+  border-radius: 5px;
+}
+
 @-webkit-keyframes a {
   0% {
     opacity: 1;
@@ -104,6 +119,11 @@ img {
 }
 .pt-7 {
   padding-top: 70px;
+}
+@media (max-width: 991px) {
+  .pt-7 {
+    padding: 0;
+  }
 }
 section {
   position: relative;
@@ -201,6 +221,7 @@ section {
     -ms-flex-order: 1;
     order: 1;
   }
+
 }
 .pix-btn {
   padding: 8px 30px;
@@ -1396,13 +1417,13 @@ textarea {
   transform-origin: left top;
   -webkit-animation: A linear 3.4s infinite;
   animation: A linear 3.4s infinite;
-  -webkit-box-shadow: 0 -10px 40px -5px #fa7070;
+  -webkit-box-shadow: 0 -10px 40px -5px #;
   box-shadow: 0 -10px 40px -5px #fa7070;
 }
 .blob,
 .blobs .blob-center {
   position: absolute;
-  background: #fa7070;
+  background: #7250fb;
   top: 50%;
   left: 50%;
   width: 30px;
@@ -4706,10 +4727,10 @@ textarea {
   bottom: auto;
   top: -50%;
 }
-
-.featured-two-same .row
-
-
+.featured-two-same h2{
+  text-align: center;
+  position: relative;
+}
 
 .featured-four-ab {
   padding-top: 146px;
@@ -4910,6 +4931,13 @@ textarea {
   left: -10px;
   z-index: -1;
 }
+
+h2 .title::after{
+content: "";
+background-color: blue;
+width: 100%;
+}
+
 .animaated-elements {
   position: relative;
   height: 540px;
@@ -5517,7 +5545,7 @@ textarea {
 .revolutionize-two {
   padding: 116px 0 30px;
 }
-.revolutionize-two .bg-angle {
+.sponsors .bg-angle {
   background-image: -o-linear-gradient(150deg, #7052fb 0, #8a60fd 100%);
   background-image: linear-gradient(-60deg, #7052fb, #8a60fd);
 }
@@ -7013,15 +7041,22 @@ textarea {
 .faq-tabs li a {
   font-size: 14px;
   font-weight: 600;
-  color: #fa7070;
-  background: hsla(0, 93%, 71%, 0.122);
-  padding: 1px 25px;
+  color: #5e67e1;
+  background: rgba(94, 103, 225, 0.122);
+  padding: 10px 35px;
+  margin: 0 20px;
   border-radius: 4px;
   display: inline-block;
 }
+
+@media (max-width: 991px) {
+  .faq-tabs li a {
+    margin: 0;
+  }
+}
 .faq-tabs li a.active,
 .faq-tabs li a:hover {
-  background: #fa7070;
+  background: #5e67e1;
   color: #fff;
 }
 .faq-tabs li:nth-child(2) a {
@@ -7361,7 +7396,11 @@ textarea {
   padding-top: 75px;
 }
 .faqs {
-  padding: 120px 0;
+  padding: 110px 0;
+}
+.faqs .btn{
+  background-color: #fff;
+  border: none;
 }
 .card {
   border: 0;
@@ -7414,11 +7453,11 @@ textarea {
   padding: 18px 40px;
 }
 .faq .card .card-header .btn-link:before {
-  content: "\32";
+  content: "-";
   display: block;
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 30px;
   z-index: 9;
   font-family: eleganticons;
   -webkit-transition: all 0.5s;
@@ -7431,7 +7470,7 @@ textarea {
   color: #fa7070;
 }
 .faq .card .card-header .btn-link.collapsed:before {
-  content: "\33";
+  content: "+";
   color: #aaa;
 }
 .faq .card .card-body {
@@ -7446,7 +7485,7 @@ textarea {
   box-shadow: 0 60px 100px 0 rgba(79, 35, 35, 0.1);
 }
 .faq-forms {
-  padding-top: 120px;
+  padding-top: 20px;
 }
 .faq-forms .section-title {
   margin-bottom: 50px;
@@ -7633,6 +7672,9 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .signup-section .bg-shape img {
   position: absolute;
@@ -7641,6 +7683,24 @@ textarea {
   top: -130px;
   left: 0;
   width: -webkit-fill-available;
+}
+.signup-section .bg-shape h2{
+  top: -30px;
+}
+@media (max-width: 991px) {
+  .signup-section .bg-shape .shape-left {
+    top:0px;
+    height: 240px;
+    width: 1000px;
+  }
+  .signup-section .bg-shape h2{
+    top: 8px;
+  }
+}
+@media (max-width: 765px) {
+  .signup-section .bg-shape .shape-left {
+    display: none;
+  }
 }
 .signup-section .bg-shape .shape-right {
   bottom: 0;
@@ -7764,7 +7824,7 @@ textarea {
   }
 }
 .countup {
-  padding: 116px 0 120px;
+  padding: 0;
 }
 .countup .pix-btn {
   margin-top: 62px;
@@ -7793,6 +7853,12 @@ textarea {
 }
 .fun-fact {
   margin-bottom: 30px;
+}
+.fun-fact .counter{
+  text-align: center;
+}
+.fun-fact p{
+  text-align: center;
 }
 .fun-fact .count,
 .fun-fact span {
@@ -7874,7 +7940,7 @@ textarea {
     left: -30%;
   }
   .countup {
-    padding: 76px 0 75px;
+    padding: 0;
   }
   .countup .pix-btn {
     margin-top: 30px;
@@ -10036,22 +10102,22 @@ textarea {
   background: #8e42f7;
   color: #fff;
 }
-#blog-grid {
+#prev-speakers {
   padding: 72px 0 90px;
 }
-#blog-grid .feature-image a {
+#prev-speakers .feature-image a {
   display: block;
   position: relative;
   overflow: hidden;
 }
-#blog-grid .feature-image a:before,
-#blog-grid .feature-image a img {
+#prev-speakers .feature-image a:before,
+#prev-speakers .feature-image a img {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-#blog-grid .feature-image a:before {
+#prev-speakers .feature-image a:before {
   content: "";
   position: absolute;
   left: 0;
@@ -10061,10 +10127,10 @@ textarea {
   opacity: 0;
   z-index: 22;
 }
-#blog-grid .feature-image a:hover:before {
+#prev-speakers .feature-image a:hover:before {
   opacity: 1;
 }
-#blog-grid .feature-image a:hover img {
+#prev-speakers .feature-image a:hover img {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
@@ -10087,15 +10153,15 @@ textarea {
 .blog-content {
   padding: 22px 45px 30px;
   background: #fff;
+  min-height: 200px;
 }
 .blog-content .post-meta {
-  margin: 0;
+  margin: 0px 0 10px 0;
   padding: 0;
   list-style: none;
 }
 .blog-content .post-meta li {
   display: inline-block;
-  margin-right: 30px;
   position: relative;
 }
 .blog-content .post-meta li:not(:last-child):after {
@@ -10123,7 +10189,7 @@ textarea {
 .blog-content .entry-title {
   font-size: 20px;
   font-weight: 600;
-  margin: 10px 0 32px;
+  margin: 10px 0 10px;
   line-height: 30px;
 }
 .blog-content .entry-title a {
@@ -10160,6 +10226,22 @@ textarea {
 .blog-content .read-more-ntn:hover i {
   margin-left: 8px;
 }
+
+@media (max-width: 991px){
+  .blog-content .post-meta li a{
+    font-size: 10px;
+  }
+  .blog-content .entry-title{
+    font-size: 15px;
+  }
+  .blog-content .post-author{
+    font-size: 12px;
+  }
+  .blog-content{
+    min-height: 230px;
+  }
+}
+
 .color-two .blog-content .entry-title a:hover,
 .color-two .blog-content .post-meta li a:hover {
   color: #7052fb;
@@ -10858,7 +10940,7 @@ textarea {
   z-index: -1;
 }
 @media (max-width: 991px) {
-  #blog-grid {
+  #prev-speakers {
     padding: 19px 0 50px;
   }
   .blog-post-archive {
@@ -11466,7 +11548,7 @@ textarea {
   background: #fdf8f8;
 }
 #footer .footer-inner {
-  padding: 116px 0 62px;
+  padding: 56px 0 50px;
 }
 #footer .widget.footer-widget .widget-title {
   color: #2b2350;
