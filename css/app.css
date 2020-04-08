@@ -11887,19 +11887,23 @@ width: 100%;
   display: inline;
   margin: 0;
 }
+
 .case:nth-child(1),
 .case:nth-child(2),
 .case:nth-child(3),
 .case:nth-child(4){border-bottom: 1px solid #ddd;}
-
-
 .case:nth-child(2),
 .case:nth-child(3),
 .case:nth-child(4){border-left: 1px solid #ddd;}
+
+@media (max-width: 991px){
+  .case:nth-child(3){border-left: none;}
+}
 
 @media (max-width: 576px){
   .col-xs-6{
     display: flex;
     max-width: 50%;
+    text-align: center;
   }
 }
