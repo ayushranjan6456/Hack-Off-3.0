@@ -416,7 +416,7 @@ window.onload = function() {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #797687}";
     document.body.appendChild(css);
 };
 
@@ -447,7 +447,7 @@ function smoothScroll(event) {
     const targetPosition = document.querySelector(targetId).offsetTop;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
-    const duration = 1000;
+    const duration = 500;
     let start = null;
     
 
@@ -464,11 +464,9 @@ function smoothScroll(event) {
     }
 
     function ease(t, b, c, d) {
-        t /= d/2;
-        if (t < 1) 
-            return c/2*t*t*t + b;
-	    t -= 2;
-	    return c/2*(t*t*t + 2) + b;
+        t /= d;
+	t--;
+	return -c * (t*t*t*t - 1) + b;
     };
   }
 
