@@ -11950,3 +11950,43 @@ textarea {
     padding-top: 2%;
   } 
 }
+
+
+#prize .vector-bg img{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width: 768px){
+  #prize .vector-bg img{
+    transform: scale(1.5);
+    left: 15%;
+    top: -25%;
+  }
+}
+@media (max-width: 480px){
+  #prize .vector-bg img{
+    transform: scale(2.5);
+    left: 70%;
+    top: -50%;
+  }
+}
+
+#prize .row{
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+
+.nav2{
+  color: #273059 !important;
+}
+.nav2::after{
+  background-color: #273059 !important;
+}
+
+#prize .row .image-holder img{
+   width: 100%;
+}
