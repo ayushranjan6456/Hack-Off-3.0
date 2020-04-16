@@ -4697,7 +4697,6 @@ textarea {
   padding-top: 400px;
 }
 .featured-two-same {
-  top:-100px;
   padding-top: 100px;
   padding-bottom: 27px;
   background-color: #54b9e1;
@@ -11866,8 +11865,12 @@ textarea {
 	 grid-template: repeat(6, 1fr) / repeat(6, 1fr);
 	 grid-gap: 0.5em;
 }
+#gallery > div {
+  border-radius: 6px;
+}
  @media (max-width: 800px) {
 	 #gallery {
+     height: calc(300vh);
 		 display: flex;
 		 align-items: flex-start;
 		 flex-wrap: wrap;
@@ -11909,7 +11912,7 @@ textarea {
  #gallery > div > img {
 	 width: 100%;
 	 min-height: 100%;
-	 transition: all ease 1s;
+   transition: all ease 1s;
 }
  #gallery > div:hover img {
 	 filter: blur(2px);
@@ -12126,15 +12129,28 @@ textarea {
 
 @media (max-width: 768px){
   #prize .vector-bg img{
-    transform: scale(1.5);
-    left: 15%;
+    transform: scale(1.5) rotateY(180deg);
+    left: -25%;
     top: -25%;
+  }
+  #prize .banner-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #prize .row h1{
+    text-align: center;
+    padding-top: 0 !important;
+  }
+  #prize .pix-btn{
+    display: none;
   }
 }
 @media (max-width: 480px){
   #prize .vector-bg img{
-    transform: scale(2.5);
-    left: 70%;
+    transform: scale(2.5) rotateX(180deg);
+    left: 17%;
     top: -50%;
   }
 }
@@ -12143,7 +12159,9 @@ textarea {
   height: 100vh;
   padding-top: 10vh;
 }
-
+#prize .row h1{
+  padding-top: 10vh;
+}
 
 .nav2{
   color: #273059 !important;
@@ -12154,4 +12172,11 @@ textarea {
 
 #prize .row .image-holder img{
    width: 100%;
+}
+
+#prize .pix-btn{
+  margin-top: 10vh;
+  background-color: #fff;
+  color: #54b9e1;
+  padding: 13px 30px;
 }
