@@ -11996,8 +11996,7 @@ textarea {
 	 mix-blend-mode: soft-light;
 }
  [id^="lightbox-"] img {
-   top: 20vh;
-	 max-height: 50vh;
+	 max-height: 70vh;
 	 max-width: 100%;
 	 margin: 0;
 	 padding: 0;
@@ -12179,4 +12178,22 @@ textarea {
   background-color: #fff;
   color: #54b9e1;
   padding: 13px 30px;
+}
+
+
+.about .row .image-holder img{
+  height: 400px;
+}
+
+.about .row .desc{
+  display: flex;
+  align-items: center;
+  padding-right: 10%; 
+  font-size: 20px;
+}
+@media (max-width: 786px){
+  .about .row .desc{
+    text-align: justify;
+    padding: 0 10%;
+  }
 }
