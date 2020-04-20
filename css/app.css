@@ -2097,7 +2097,7 @@ textarea {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 333;
+  z-index: 33;
   top: 0;
   left: 0;
 }
