@@ -11943,6 +11943,13 @@ textarea {
   bottom: 0;
   left: 200px;
 }
+#footer .logo{
+  display: flex;
+  justify-content: center;
+}
+#footer .logo img{
+  width:50%;
+}
 .site-info-menu {
   margin: 0;
   padding: 0;
@@ -11987,6 +11994,13 @@ textarea {
   }
   #footer.footer-four .site-info .site-info-inner {
     display: block;
+  }
+  #footer .logo{
+    justify-content: start;
+    padding-bottom: 20px;
+  }   
+  #footer .logo img{
+    width:30%;
   }
 }
 
@@ -12069,10 +12083,10 @@ textarea {
 
 @media (min-width: 991px){
   #conduct .banner-content p{
-    padding-right: 28%;
+    padding-right: 23%;
   }
   #conduct .row{
-    margin: 7% 0;
+    margin: 0;
   }
   #conduct .banner-content .banner-title{
     font-size: 50px;
