@@ -144,16 +144,6 @@ section {
   margin: 0 auto;
 }
 
-.sticker{
-  width:100%;
-  position: absolute;
-  top: 92vh;
-}
-
-.sticker img{
-  min-height: 70px;
-}
-
 .gutters-10 > [class*="col-"] {
   padding: 0 5px;
 }
@@ -11741,15 +11731,6 @@ section {
   margin: 0 auto;
 }
 
-.sticker{
-  width:100%;
-  position: absolute;
-  top: 92vh;
-}
-
-.sticker img{
-  min-height: 70px;
-}
 
 .gutters-10 > [class*="col-"] {
   padding: 0 5px;
@@ -23262,6 +23243,10 @@ textarea {
 .fancybox-container{
   z-index: 999999;
 }
+
+.fancybox-progress{
+  background: #54b9e1 !important;
+}
   
 /*# Carousel Gallery*/
 
@@ -23846,12 +23831,25 @@ textarea {
   } 
 }
 
+.sticker{
+  width:100%;
+  position: absolute;
+  top: 92vh;
+}
 
-#prize .vector-bg img{
+.sticker img{
+  min-height: 70px;
+}
+
+#prize .vector-bg img{  
   height: 100vh;
   width: 100vw;
   position: absolute;
   z-index: -1;
+}
+#prize .image-holder{
+  display:flex;
+  justify-content:center;
 }
 
 @media (max-width: 768px){
@@ -23873,12 +23871,33 @@ textarea {
   #prize .pix-btn{
     display: none;
   }
+  #prize br{
+    display: none;
+  }
+  #prize .row .image-holder img{
+    width: 80% !important;
+  }
+  #prize .desc{
+    top: -10%;
+  }
+  .sticker img{
+    transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+  }
 }
 @media (max-width: 480px){
   #prize .vector-bg img{
     transform: scale(2.5) rotateX(180deg);
+    -moz-transform: scale(2.5) rotateX(180deg);
+    -webkit-transform: scale(2.5) rotateX(180deg);
     left: 17%;
     top: -50%;
+  }
+  .sticker img{
+    transform: scale(3);
+    -moz-transform: scale(3);
+    -webkit-transform: scale(3);
   }
 }
 
@@ -24361,69 +24380,6 @@ textarea {
   } 
 }
 
-
-#prize .vector-bg img{
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  z-index: -1;
-}
-
-@media (max-width: 768px){
-  #prize .vector-bg img{
-    transform: scale(1.5) rotateY(180deg);
-    left: -25%;
-    top: -25%;
-  }
-  #prize .banner-content{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  #prize .row h1{
-    text-align: center;
-    padding-top: 0 !important;
-  }
-  #prize .pix-btn{
-    display: none;
-  }
-}
-@media (max-width: 480px){
-  #prize .vector-bg img{
-    transform: scale(2.5) rotateX(180deg);
-    left: 17%;
-    top: -50%;
-  }
-}
-
-#prize .row{
-  height: 100vh;
-  padding-top: 10vh;
-}
-#prize .row h1{
-  padding-top: 10vh;
-}
-
-.nav2{
-  color: #273059 !important;
-}
-.nav2::after{
-  background-color: #273059 !important;
-}
-
-#prize .row .image-holder img{
-   width: 100%;
-}
-
-#prize .pix-btn{
-  margin-top: 10vh;
-  background-color: #fff;
-  color: #54b9e1;
-  padding: 13px 30px;
-}
-
-
 .about .row .image-holder img{
   height: 400px;
 }
@@ -24440,3 +24396,4 @@ textarea {
     padding: 0 10%;
   }
 }
+
