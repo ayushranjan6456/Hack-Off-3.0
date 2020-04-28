@@ -449,9 +449,7 @@ function smoothScroll(event) {
     const distance = targetPosition - startPosition;
     const duration = 500;
     let start = null;
-    
-
-
+   
     window.requestAnimationFrame(step);
   
     function step(now) { 
@@ -465,15 +463,13 @@ function smoothScroll(event) {
 
     function ease(t, b, c, d) {
         t /= d;
-	t--;
-	return -c * (t*t*t*t - 1) + b;
+	return -c * t*(t-2) + b;
     };
   }
 
 var links = document.querySelectorAll(".nav");
 
-links.forEach(elem => elem.addEventListener("click", smoothScroll));      
-
+links.forEach(elem => elem.addEventListener("click", smoothScroll));   
 
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
@@ -504,12 +500,12 @@ $(document).ready(function(){
       },
       breakpoints: {
         // when window width is <= 320px
-        320: {
+        375: {
           slidesPerView: 1,
           spaceBetween: 5
         },
         // when window width is <= 480px
-        425: {
+        480: {
           slidesPerView: 2,
           spaceBetween: 10
         },
