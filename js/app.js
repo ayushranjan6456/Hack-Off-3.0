@@ -532,8 +532,13 @@ var swiper = new Swiper('#prev-speakers .swiper-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
+    lazyLoading: true,
+    lazy: {
+        loadPrevNext: true,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
   });
