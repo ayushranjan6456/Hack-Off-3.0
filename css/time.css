@@ -83,7 +83,7 @@
 .main-timeline .timeline:nth-child(4n+4) .timeline-icon{
     background: #273059;
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     .main-timeline .timeline,
     .main-timeline .timeline:nth-child(even){
         width: 100%;

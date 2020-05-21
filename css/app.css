@@ -23256,8 +23256,14 @@ textarea {
   -webkit-box-pack:center;
           justify-content:center;
 }
-
+#prize1{
+  margin: 5%;
+}
 @media (max-width: 768px){
+    
+  #prize1{
+    margin: 10%;
+  }
   #prize .vector-bg img{
     -webkit-transform: scale(1.5) rotateY(180deg);
             transform: scale(1.5) rotateY(180deg);
